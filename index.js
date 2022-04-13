@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8877;
 let db = firestore.getFirestore(appFire);
 
 async function getImages(db){
-    const collenction = firestore.collection(db, 'imagens');
+    const collenction = firestore.collection(db, 'your collection');
     const Snapshot = await firestore.getDocs(collenction);
     const List = Snapshot.docs.map(doc => doc.data());
     console.log(List);
